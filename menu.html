@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Responsive menu</title>
+<meta charset="utf-8" />
+<meta name="description" content="Responsive menu" />
+<meta name="keywords" content="full menu, full responsive menu, css3 menu, responsive menu, menu, collection menu, animation menu, css3 animation, responsive menu js" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/menu.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/fontello.css" type="text/css" media="screen"/>
+<style>
+
+#select_effect{
+	display: none;
+}
+
+.container{
+	text-align: center;
+}
+
+.link{
+	text-decoration: none;
+}
+
+.menu{
+	margin-bottom: 35px;
+}
+
+.img{
+	float: left;
+	margin-right: 35px;
+}
+
+.description{
+	font-size: 14px;
+	margin-top: 10px;
+	text-align: left;
+}
+
+.paragraph{
+	margin-bottom: 15px;
+}
+
+.drop_down_block:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.additional_menu .menu{
+	margin: 0;
+}
+
+#icon_menu{
+	margin: 0 auto;
+}
+
+.drop_down_menu_link {
+
+	text-align: left;
+	padding: 10px 15px;
+	
+	color: #242424;
+	font-size: 15px;
+}
+
+.slide_bottom_block .drop_down_block{
+	-webkit-transform: translateZ(0px) translate(-38%, -10%);
+	-ms-transform: translateZ(0px) translate(-38%, -10%);
+    -o-transform: translateZ(0px) translate(-38%, -10%);
+	transform: translateZ(0px) translate(-38%, -10%);
+}	
+
+.slide_bottom_block:hover .drop_down_block{
+	-webkit-transform: translateZ(0px) translate(-38%, 0);
+	-ms-transform: translateZ(0px) translate(-38%, 0);
+    -o-transform: translateZ(0px) translate(-38%, 0);
+	transform: translateZ(0px) translate(-38%, 0);
+}	
+
+.additional_menu{
+	opacity: 0;
+}
+
+.active_menu .additional_menu{
+	opacity: 1;
+}
+
+@media screen and (max-width: 1280px){ 
+	#select_effect{
+		display: block;
+	}
+}
+
+@media screen and (max-width: 640px){ 
+
+	.img{
+		float: none;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.description{
+		width: 96%;
+		padding: 0 2%;
+	}
+}
+
+@media screen and (max-width: 480px){ 
+
+	.title{
+		font-size: 18px;
+		text-align: left;
+	}
+	
+	#control_color, .control{
+		padding-left: 0;
+		text-align: left;
+	}
+	
+	.content_item .title{
+		text-align: center;
+	}
+	
+	.select_effect_item{
+		margin: 10px 35px 10px 0;
+	}
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<h1 class="title">Responsive menu</h1>
+		<div id="select_effect" class="control">
+			<h3 class="title">Select effect</h3>
+			<span class="select_effect_item" data-id="top_menu">top_menu</span>
+			<span class="select_effect_item" data-id="bottom_menu">bottom_menu</span>
+			<span class="select_effect_item" data-id="left_menu">left_menu</span>
+			<span class="select_effect_item" data-id="right_menu">right_menu</span>
+		</div>
+
+		<div class="control" id="version_menu">
+			<h3 class="title">More menus</h3>
+			<a href="side_menu.html" class="select_effect_item link">Side menu</a>
+		</div>
+		<nav id="wrapper_menu">	
+			<span id="icon_menu" class="position_right" data-effect="slide_top" data-menu="drop_down_block">&nbsp;</span>
+			<ul class="menu">
+				<li class="menu_item">
+					<a href="#" class="menu_link">Home</a>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link">Girl <span class="line_bottom">&nbsp;</span>
+					</a>
+				</li>
+				<li class="menu_item wrapper_drop_down_block slide_bottom_block wrapper_drop_down_menu">
+					<a href="#" class="menu_link">Animals</a>
+					<ul class="drop_down_block drop_down_menu">
+						<li class="drop_down_menu_item"><a class="drop_down_menu_link" href="#">Birds</a></li>
+						<li class="drop_down_menu_item"><a class="drop_down_menu_link" href="#">Turtles</a></li>
+						<li class="drop_down_menu_item"><a class="drop_down_menu_link" href="#">Monkeys</a></li>
+					</ul>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link">Nature <span class="line_bottom">&nbsp;</span></a>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link">Production <span class="line_bottom">&nbsp;</span></a>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link">Toys</a>
+				</li>
+				<li class="menu_item wrapper_drop_down_block">
+					<a href="#" class="menu_link">Contacts</a>
+					<div class="drop_down_block content_block">
+						<img class="img" src="images/cats.jpg" alt="image" />
+						<div class="description">
+							<p class="paragraph">
+								Cats are similar in anatomy to the other felids, with strong, flexible bodies, quick reflexes, sharp retractable claws, and teeth adapted to killing small prey. 
+							</p>
+							<p class="paragraph">
+								Cat senses fit a crepuscular and predatory ecological niche. Cats can hear sounds too faint or too high in frequency for human ears, such as those made by mice and other small animals. They can see in near darkness. Like most other mammals, cats have poorer color vision and a better sense of smell than humans.
+							</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</nav>	
+		<div class="content">
+			<a href="index.html" class="content_item">
+				<i class="icon icon-home"></i>
+				<h3 class="title">Home</h3>
+			</a>
+			<a href="accordion.html" class="content_item">
+				<i class="icon icon-th-list"></i>
+				<h3 class="title">Responsive accordion</h3>
+			</a>
+			<a href="tabs.html" class="content_item">
+				<i class="icon icon-folder"></i>
+				<h3 class="title">Responsive tabs</h3>
+			</a>
+			<a href="forms.html" class="content_item">
+				<i class="icon icon-edit"></i>
+				<h3 class="title">Responsive forms</h3>
+			</a>
+			<a href="table.html" class="content_item">
+				<i class="icon icon-table"></i>
+				<h3 class="title">Responsive table</h3>
+			</a>
+			<a href="filter.html" class="content_item">
+				<i class="icon icon-filter"></i>
+				<h3 class="title">Responsive filter</h3>
+			</a>
+			<a href="grid.html" class="content_item">
+				<i class="icon icon-th"></i>
+				<h3 class="title">Responsive grid</h3>
+			</a>
+			<a href="hover_animate.html" class="content_item">
+				<i class="icon icon-up-hand"></i>
+				<h3 class="title">Responsive hover</h3>
+			</a>
+			<a href="preloaders.html" class="content_item">
+				<i class="icon icon-spinner"></i>
+				<h3 class="title">Responsive preloaders</h3>
+			</a>
+			<a href="menu.html" class="content_item">
+				<i class="icon icon-menu"></i>
+				<h3 class="title">Responsive menu</h3>
+			</a>
+		</div>
+		<a href="http://codecanyon.net/item/responsive-framework/8818382" id="buy">Buy full version for 9$</a>
+		<div class="copyright">Developed by Stas Melnikov. </div>
+	</div>
+	<div id="background_additional_menu"></div>
+	<div id="bottom_menu" class="additional_menu">
+		<span id="close_menu">+</span>
+		<ul class="menu">
+			<li class="menu_item">
+				<a href="#" class="menu_link">Home</a>
+			</li>
+			<li class="menu_item">
+				<a href="#" class="menu_link">Girl</a>
+			</li>
+			<li class="menu_item">
+				<a href="#" class="menu_link">Animals</a>
+			</li>
+			<li class="menu_item">
+				<a href="#" class="menu_link">Nature</a>
+			</li>
+			<li class="menu_item">
+				<a href="#" class="menu_link">Production</a>
+			</li>
+			<li class="menu_item">
+				<a href="#" class="menu_link">Toys</a>
+			</li>
+			<li class="menu_item">
+				<a href="#" class="menu_link">Contacts</a>
+			</li>
+		</ul>
+	</div>
+<script src="js/jquery.js"></script>
+<script async src="js/menu.js"></script>
+<script>	
+(function($){	
+	$('.select_effect_item').on('click', function(){
+		var effects = $(this).attr('data-id');
+		$('.additional_menu').attr({'id' : effects});
+
+	});
+})(jQuery);
+</script>
+</body>
+</html>

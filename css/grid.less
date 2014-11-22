@@ -1,0 +1,196 @@
+/*
+Responsive framework
+author: Developed by Stas Melnikov. http://stas-melnikov.ru
+*/
+
+/*********************************************mixins*********************************/
+
+.basic_font(){
+	font-family: arial;
+	font-weight: 300;
+	font-size: 14px;
+}
+
+.clear(){
+	clear: both;
+	content: " ";
+	display: block;
+}
+
+.transition(@property, @x, @effect){
+	transition: @property @x @effect 0s;
+	-moz-transition: @property @x @effect 0s;
+	-webkit-transition: @property @x @effect 0s;
+	-webkit-transition-delay:  @x 0s;
+}
+
+.main_container(){
+	padding-left: 20px;
+	padding-right: 20px;
+	
+	min-width: 100px;
+	max-width: 940px;
+	
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+}
+
+/**********************************************all**********************************************/
+
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+	list-style: none;
+}
+
+.title{
+	margin: 30px 0;
+}
+
+.main_container{
+	.main_container;
+	margin-bottom: 35px;
+	
+	.title_post{
+		font-size: 22px;
+	}
+}
+
+.main_container_item{
+
+	display: inline-block;
+	
+	padding: 1%;
+	text-align: center;
+	line-height: 25px;
+	vertical-align: top;
+	
+}
+
+.columns2{ 
+
+	.main_container_item{
+		width: 46%;
+	}
+}
+
+.columns3{ 
+
+	.main_container_item{
+		width: 30%;
+	}
+}
+
+.columns4{ 
+
+	.main_container_item{
+		width: 22%;
+	}
+}
+
+.small_column{
+	width: 35%;
+	
+	.title_post{
+		text-align: left;
+	}
+}
+
+.big_column{
+	width: 60%;
+	
+	.title_post{
+		text-align: left;
+	}
+}
+
+.img_post{
+	margin-bottom: 25px;
+}
+
+.title_post{
+
+	font-size: 20px;
+	margin-bottom: 15px;
+}
+
+.readmore{
+	font-size: 12px;
+	text-decoration: none;
+	color: #7aa7ea;
+	
+	.transition(color, .4s, ease);
+}
+
+.readmore:hover{
+	color: #000;
+}
+
+@media screen and (max-width: 900px) {
+	
+	.columns4 {
+
+		.main_container_item{
+			width: 46%	
+		}
+	}
+}
+
+@media screen and (max-width: 800px){
+	.combined {
+
+		.columns2 .main_container_item {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 700px){
+
+	.columns2{
+		.main_container_item{
+			width: 100%;
+		}
+	}
+
+	.columns3{
+		.main_container_item{
+			width: 100%;
+		}
+	}
+	
+	.big_column, .small_column {
+		width: 100%;
+	}
+	
+	.combined {
+
+		.columns2 .main_container_item {
+			width: 100%;
+		}
+	}
+
+}
+
+@media screen and (max-width: 640px){
+	.small_column, .big_column{
+		width: 100%;
+	
+	}
+}
+@media screen and (max-width: 480px){
+	.columns4{
+		.main_container_item{
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 360px){
+	.main_container {
+		padding: 0 5px;
+		width: 94%;
+	}
+}

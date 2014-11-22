@@ -1,0 +1,144 @@
+/*
+Responsive framework
+author: Developed by Stas Melnikov. http://stas-melnikov.ru
+*/
+
+/**************mixins************/
+
+.basic_font(){
+	font-family: arial;
+	font-weight: 300;
+	font-size: 14px;
+}
+
+.clear(){
+	clear: both;
+	content: " ";
+	display: block;
+}
+
+.transition(@property, @x, @effect){
+	transition: @property @x @effect 0s;
+	-moz-transition: @property @x @effect 0s;
+	-webkit-transition: @property @x @effect 0s;
+	-webkit-transition-delay:  @x 0s;
+}
+
+/**************all***************/
+
+.tabs_container{
+	
+	.current {
+		background: #F7F7F7 !important;
+		color: #4F5559;
+	}
+}
+
+.tabs_container:after{
+	.clear;
+}
+
+.tabs {
+	float: left;
+}
+
+.tab {
+	background: #36BAE2;
+	text-align: center;	
+	float: left;
+	padding: 16px 20px;
+	cursor: pointer;
+	
+	.basic_font();
+	color: #FFFFFF;
+	
+	.transition(all, 0.2s, linear);
+}
+
+.box {
+    background: none repeat scroll 0 0 #F7F7F7;
+    display: none;
+	width: 96%;
+	padding: 25px 2% 10px;
+	float: left;
+	
+	overflow: hidden;
+}
+
+.box_item{
+	margin-bottom: 15px;
+}
+	
+.visible, .show_tab {
+	display: block;
+}
+
+.horizontal{
+	.tabs{
+		float: left;
+		width: 20%;
+	}
+	
+	.box{
+		float: left;
+		width: 75%;
+		min-height: 111px;
+		border-bottom: 1px solid #eee;
+	}
+	
+	.tab{
+		display: block;
+		float: none;
+		border-bottom: 1px solid #eee;
+	}
+}
+
+.horizontal:after{
+	.clear;
+}
+
+
+/************************800************************************/
+
+@media screen and (max-width: 800px){
+
+	.horizontal .tabs{
+		float: none;
+		width: 100%;
+		
+		.tab {
+			width: 100%;
+			padding: 15px 0;
+			float: none;
+			border-bottom: 1px solid #ddd;
+		}
+	}
+	
+	.horizontal .box{
+		width: 90%;
+		padding: 25px 5% 10px;
+	}
+
+}
+
+/************************600************************************/
+
+@media screen and (max-width: 600px){
+
+	.tabs{
+		float: none;
+		
+		.tab {
+			width: 100%;
+			padding: 15px 0;
+			float: none;
+			border-bottom: 1px solid #ddd;
+		}
+	}
+	
+	.box {
+		width: 90%;
+		padding: 25px 5% 10px;
+	}
+}
+

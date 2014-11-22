@@ -1,0 +1,84 @@
+/*
+Responsive framework
+author: Developed by Stas Melnikov. http://stas-melnikov.ru
+*/
+
+* { 
+	margin: 0; 
+	padding: 0; 
+}
+
+.transition(@property, @x, @effect){
+
+	transition: @property @x @effect 0s;
+	-moz-transition: @property @x @effect 0s;
+	-webkit-transition: @property @x @effect 0s;
+	-webkit-transition-delay:  @x 0s;
+}
+
+table { 
+	margin-top: 30px; 
+	width: 100%; 
+	border-collapse: collapse; 
+}
+
+tr:nth-of-type(odd) { 
+	background-color: #eee;
+	.transition(all, 0.2s, ease-in);
+}
+
+tr:hover{ 
+	background-color: rgba(20,147,200,0.8);
+	color: #fff;
+}
+
+th { 
+	background: rgba(20,147,200,0.8); 
+	color: white; 
+	font-weight: bold; 
+}
+
+.title_column{ 
+	display: none;
+}
+
+td, th { 
+	padding: 5px; 
+	border: 1px solid #ccc; 
+	text-align: left; 
+}
+	
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px)  {
+	
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	thead tr { 
+		display: none;
+	}
+	
+	tr { 
+		border: 1px solid #ccc;
+	}
+	
+	td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	.title_column{ 
+
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		
+		width: 45%; 
+		display: block;
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+}
+	

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Responsive forms</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Responsive forms - it's HTML, CSS and JS component for forms." />
+<meta name="keywords" content="responsive forms, forms, ajax forms" />
+<meta name="author" content="Stas Melnikov" />
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/form.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/fontello.css" type="text/css" media="screen"/>
+<style>
+.element_form{
+	padding-bottom: 25px;
+	padding-right: 35px;
+	
+	display: inline-block;
+	vertical-align: top;
+}
+
+.element_form .title{
+	margin: 0 0 25px;
+	font-size: 20px;
+}
+
+.paragraph{
+	margin: 15px 0;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<h1 class="title">Responsive forms</h1>
+				
+		<section id="feedback" class="wrapper_form">
+			<h2 class="title">Feedback</h2>
+			<form class="form" id="form_contact">
+				<div class="left_column">
+					<input type="text" id="full_name" name="full_name" class="input_text" placeholder="Name"  required />
+					<input class="input_text" type="email" id="email"  name="email" placeholder="Email" required />
+				</div>
+				<textarea class="input_text textarea" id="comment" name="comment" placeholder="Review" required></textarea>
+				<button type="submit" id="button" class="button" disabled="disabled">send</button>
+			</form>
+		</section>
+		<section class="wrapper_form">
+			<h2 class="title">Form elements</h2>
+			<div class="element_form">
+				<h2 class="title">Select box</h2>
+				<div class="drop_down_list_wrapper">
+					<span class="selected">Active category</span>
+					<ul class="drop_down_list">
+						<li class="drop_down_list_item"><span class="drop_down_list_link">category one</span></li>
+						<li class="drop_down_list_item"><span class="drop_down_list_link">category two</span></li>
+						<li class="drop_down_list_item"><span class="drop_down_list_link">category three</span></li>
+					</ul>
+				</div>
+			</div>	
+			<div class="element_form">
+				<h2 class="title">Checkbox</h2>
+				<div class="checkbox_wrapper">
+					<input type="checkbox" id="checkbox" name="checkbox" class="checkbox" />
+					<label class="label_checkbox" for="checkbox">checkbox</label>
+				</div>
+			</div>
+			<div class="element_form">
+				<h2 class="title">Radiobox</h2>
+				<label class="radio_label">
+					<input type="radio" class="radiobox"/>
+					<span class="check_radio"></span>
+					radiobox
+				</label>
+			</div>
+			<div class="element_form">
+				<h2 class="title">Switch</h2>
+				<input class="switch_input" type="checkbox" id="switch_input" />
+				<label class="switch_label" for="switch_input"></label>
+			</div>
+			<div class="element_form">
+				<h2 class="title">Inputs</h2>
+				<input type="text" class="input_text " placeholder="Text" />
+				<input type="text" class="input_text success " placeholder="Text" />
+				<input type="text" class="input_text error" placeholder="Text" />
+			</div>
+		</section>
+		
+		<div id="wrapper_response"></div>
+		<div class="content">
+			<a href="index.html" class="content_item">
+				<i class="icon icon-home"></i>
+				<h3 class="title">Home</h3>
+			</a>
+			<a href="accordion.html" class="content_item">
+				<i class="icon icon-th-list"></i>
+				<h3 class="title">Responsive accordion</h3>
+			</a>
+			<a href="tabs.html" class="content_item">
+				<i class="icon icon-folder"></i>
+				<h3 class="title">Responsive tabs</h3>
+			</a>
+			<a href="forms.html" class="content_item">
+				<i class="icon icon-edit"></i>
+				<h3 class="title">Responsive forms</h3>
+			</a>
+			<a href="table.html" class="content_item">
+				<i class="icon icon-table"></i>
+				<h3 class="title">Responsive table</h3>
+			</a>
+			<a href="filter.html" class="content_item">
+				<i class="icon icon-filter"></i>
+				<h3 class="title">Responsive filter</h3>
+			</a>
+			<a href="grid.html" class="content_item">
+				<i class="icon icon-th"></i>
+				<h3 class="title">Responsive grid</h3>
+			</a>
+			<a href="hover_animate.html" class="content_item">
+				<i class="icon icon-up-hand"></i>
+				<h3 class="title">Responsive hover</h3>
+			</a>
+			<a href="preloaders.html" class="content_item">
+				<i class="icon icon-spinner"></i>
+				<h3 class="title">Responsive preloaders</h3>
+			</a>
+			<a href="menu.html" class="content_item">
+				<i class="icon icon-menu"></i>
+				<h3 class="title">Responsive menu</h3>
+			</a>
+		</div>
+		<a href="http://codecanyon.net/item/responsive-framework/8818382" id="buy">Buy full version for 9$</a>
+		<div class="copyright">Developed by Stas Melnikov. </div>
+	</div>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script async type="text/javascript" src="js/feedback.js"></script>
+<script async type="text/javascript" src="js/form_elements.js"></script>
+</body>
+</html>

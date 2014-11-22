@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>Responsive hover</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Responsive hover" />
+<meta name="keywords" content="responsive hover, hover, hover css3, animation, css3 animation" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<link rel="stylesheet" type="text/css" href="css/hover_animate.css" />
+<link rel="stylesheet" type="text/css" href="css/grid.css" />
+<link rel="stylesheet" href="css/fontello.css" type="text/css" media="screen"/>
+<style>
+body{
+	background-color: #becfd4;
+	
+	font-family: arial;
+	font-size: 16px;
+	color: #000;
+}
+
+.main_container {
+    max-width: 1000px;
+}
+
+.hover_element, .wrapper_svg{
+	display: inline-block;
+	vertical-align: top;
+	margin: 10px;
+}
+
+@media screen and (max-width: 400px){
+	.hover_element, .wrapper_svg{
+		margin: 10px 0;
+	}
+}
+</style>
+</head>
+<body>
+	<h1 class="title">Responsive hover</h1>
+	<h2 class="title">Hover dotted</h2>
+	<div class="main_container columns2">
+		<div class="main_container_item">
+		
+			<ul id="vertical_background_effect" class="list background_effect">
+				<li class="list_item active_item_dotted">
+					<span class="events_slider_dotted">1</span>
+				</li>
+				<li  class="list_item">
+					<span class="events_slider_dotted" >2</span>
+				</li>
+				<li  class="list_item">
+					<span class="events_slider_dotted" >3</span>
+				</li>
+				<li  class="list_item">
+					<span class="events_slider_dotted" >4</span>
+				</li>
+				<li  class="list_item">
+					<span class="events_slider_dotted" >5</span>
+				</li>
+			</ul>
+		</div>
+		<div class="main_container_item">
+			<ul id="horizontally_background_effect" class="list background_effect">
+				<li class="list_item active_item_dotted">
+					<span class="events_slider_dotted">1</span>
+				</li>
+				<li  class="list_item">
+					<span class="events_slider_dotted" >2</span>
+				</li>
+				<li  class="list_item">
+					<span class="events_slider_dotted" >3</span>
+				</li>
+				<li  class="list_item">
+					<span class="events_slider_dotted" >4</span>
+				</li>
+				<li  class="list_item">
+					<span class="events_slider_dotted" >5</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<h2 class="title">Hover images</h2>
+	<div class="main_container ">
+			<div class="hover_element" id="hover_center_opacity">
+				<img src="images/3.jpg"  alt="cat"/>
+				<div class="circle">
+					<span class="circle_item">Norwegian Forest Cat</span>
+				</div>
+			</div>
+			<div class="hover_element hover_center_circle" id="hover_top_circle">
+				<img src="images/3.jpg"  alt="cat"/>
+				<div class="circle">
+					<span class="circle_item">British Shorthair cat</span>
+				</div>
+			</div>
+			<div class="hover_element hover_center_circle" id="hover_bottom_circle">
+				<img src="images/3.jpg"  alt="cat"/>
+				<div class="circle">
+					<span class="circle_item">Exotic cat</span>
+				</div>
+			</div>
+			<div class="hover_element hover_full_background">
+				<img src="images/3.jpg"  alt="cat"/>
+				
+				<div class="background"> 
+						<span class="background_item">Siamese cat</span>
+				</div>
+			</div>
+	</div>
+	
+	<div class="container">
+		<div class="content">
+			<a href="index.html" class="content_item">
+				<i class="icon icon-home"></i>
+				<h3 class="title">Home</h3>
+			</a>
+			<a href="accordion.html" class="content_item">
+				<i class="icon icon-th-list"></i>
+				<h3 class="title">Responsive accordion</h3>
+			</a>
+			<a href="tabs.html" class="content_item">
+				<i class="icon icon-folder"></i>
+				<h3 class="title">Responsive tabs</h3>
+			</a>
+			<a href="forms.html" class="content_item">
+				<i class="icon icon-edit"></i>
+				<h3 class="title">Responsive forms</h3>
+			</a>
+			<a href="table.html" class="content_item">
+				<i class="icon icon-table"></i>
+				<h3 class="title">Responsive table</h3>
+			</a>
+			<a href="filter.html" class="content_item">
+				<i class="icon icon-filter"></i>
+				<h3 class="title">Responsive filter</h3>
+			</a>
+			<a href="grid.html" class="content_item">
+				<i class="icon icon-th"></i>
+				<h3 class="title">Responsive grid</h3>
+			</a>
+			<a href="hover_animate.html" class="content_item">
+				<i class="icon icon-up-hand"></i>
+				<h3 class="title">Responsive hover</h3>
+			</a>
+			<a href="preloaders.html" class="content_item">
+				<i class="icon icon-spinner"></i>
+				<h3 class="title">Responsive preloaders</h3>
+			</a>
+			<a href="menu.html" class="content_item">
+				<i class="icon icon-menu"></i>
+				<h3 class="title">Responsive menu</h3>
+			</a>
+		</div>
+		<a href="http://codecanyon.net/item/responsive-framework/8818382" id="buy">Buy full version for 9$</a>
+		<div class="copyright">Developed by Stas Melnikov. </div>
+	</div>
+<script type="text/javascript" src="js/jquery.js"></script>	
+	<script>
+		(function($){
+			$('.list_item').on('click', function(){
+				$(this).addClass('active_item_dotted').siblings().removeClass('active_item_dotted');
+			})
+		})(jQuery);
+	</script>
+
+</body>
+</html>

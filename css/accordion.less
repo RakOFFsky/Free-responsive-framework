@@ -1,0 +1,104 @@
+/*
+Responsive framework
+author: Developed by Stas Melnikov. http://stas-melnikov.ru
+*/
+
+/**************mixins************/
+
+.transition(@property, @x, @effect){
+	transition: @property @x @effect 0s;
+	-moz-transition: @property @x @effect 0s;
+	-webkit-transition: @property @x @effect 0s;
+	-webkit-transition-delay:  @x 0s;
+}
+
+.transform_rotate(@value) {
+
+	-webkit-transform: rotate(@value);
+	-moz-transform: rotate(@value);
+	-ms-transform: rotate(@value);
+	transform: rotate(@value);
+}
+
+/**************all***************/
+
+.accordion_list{
+
+	margin-bottom: 50px;
+
+	.accordion_list_item{
+
+		margin-bottom: 3px;
+		position: relative;
+		
+	}
+	
+	.title_info_block{
+	
+		font-weight: normal;
+		font-size: 20px;
+		color: #4e5762;
+		
+		cursor: pointer;
+		background: #f7f7f7;
+		padding: 10px 55px 10px 15px;
+		
+		.transition(all, 0.2s, linear);
+	}
+			
+	.arrow:before{
+		content:'';
+		height: 8px;
+		width: 8px;
+		display: block;
+		
+		border: 2px solid #939da9;
+		border-right-width: 0;
+		border-top-width: 0; 
+
+		.transform_rotate(-45deg);
+		
+		position: absolute;
+		right: 20px;
+		top: 12px;
+	}
+	
+	.icon:before{
+		content:'+';
+		height: 8px;
+		width: 8px;
+		display: block;
+
+		position: absolute;
+		right: 35px;
+		top: 10px;
+	}
+	
+	.active_info_block .title_info_block{
+		background: #36BAE2;
+		color: #fefefe;
+	}
+	
+	.active_info_block .arrow:before{
+		border: 2px solid #fefefe;
+		border-left-width: 0; 
+		border-bottom-width: 0;
+		
+		top: 15px;
+	}
+	
+	.active_info_block .icon:before{
+		content: '—'
+	}
+	
+	.info{
+		display: none;
+		padding: 10px 15px;
+		background: #f7f7f7;
+	}
+	
+	.info_item{
+		margin-bottom: 15px;
+	}
+}
+

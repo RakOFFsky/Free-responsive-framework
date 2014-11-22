@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Responsive framework - it's HTML, CSS and JS framework for fast and easy development.</title>
+<meta charset="utf-8" />
+<meta name="description" content="Responsive framework - it's HTML, CSS and JS framework for fast and easy development." />
+<meta name="keywords" content="responsive framework, responsive design, responsive tabs, pure js tabs, pure js accordion, responsive accordion, responsive components, pure javascript slider, responsive slider, responsive preloaders, responsive tooltips" />
+<meta name="author" content="Stas Melnikov" />
+<meta name="google-site-verification" content="-ZHI-_3YQSfXYHeB5tzmTypafoIQlflF_xJJRdu926w" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/grid.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/tabs.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/table.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/accordion.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/fontello.css" type="text/css" media="screen"/>
+<style>
+
+body{
+	line-height: 30px;
+}
+
+.title{
+	line-height: 40px;
+}
+
+.box, .accordion_list_item{
+	text-align: left;
+	font-size: 14px;
+}
+
+.box .list_item, .accordion_list_item .list_item{
+	display: block;
+}
+
+.box .list_item:before, .accordion_list_item .list_item:before{
+	content: "";
+	
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 15px;
+	
+	background-color: #36BAE2;
+	
+	width: 15px;
+	height: 2px;
+}
+
+.main_container_item .title{
+	text-align: left;
+}
+
+.list_item{
+	display: inline-block;
+}
+
+.date, .improvement, .user{
+	font-size: 12px;
+	color: #36bae2;
+}
+
+.improvement{
+	font-size: 16px;
+}
+
+.title_column{ 
+
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	
+	width: 45%; 
+	display: block;
+	padding-right: 10px; 
+	white-space: nowrap;
+}
+
+.container{
+	text-align: center;
+	min-width: 100px;
+}
+
+.content_item{
+
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	
+	font-size: 14px;
+	text-decoration: none;
+	
+	width: 260px;
+	margin: 10px;
+}	
+
+.content_item .title{
+	font-size: 18px;
+	margin: 15px 0;
+	
+	
+	transition: color .4s ease-out 0s;
+	-webkit-transition: color .4s ease-out 0s;
+	-webkit-transition-delay:  .4s ease-out;
+}
+
+.testimonials .content_item {
+
+	width: 45%;
+	text-align: right;
+	line-height: 24px;
+	padding-bottom: 25px;
+}
+
+.content_item .testimonial{
+
+	background-color: #f2f2f2;
+	margin-bottom: 15px;
+	
+	padding: 10px 15px;
+	text-align: left;
+	
+	font-size: 12px;
+	font-style: italic;
+}
+
+.mail{
+	color: #36bae2;
+	font-size: 14px;
+}
+
+.icon{
+    color: #000;
+    display: block;
+    font-size: 35px;
+	
+	transition: color .4s ease-out 0s;
+	-webkit-transition: color .4s ease-out 0s;
+	-webkit-transition-delay:  .4s ease-out;
+}
+
+.content_item:hover .title, .content_item:hover .icon{
+	color: #36BAE2;
+}
+
+@media screen and (max-width: 700px){
+	.testimonials .content_item {
+		width: 98%;
+	}
+}
+
+@media screen and (max-width: 640px){
+	.title{
+		line-height: 30px;
+		font-size: 20px;
+	}
+}
+</style>
+
+</head>
+<body>
+	<div class="container">
+		<h1 class="title">Responsive framework - it's HTML, CSS and JS framework for fast and easy development.</h1>
+		<p class="paragraph">
+			I developed most often meeting elements of design and I adapted them under mobile devices. All components of library conform to the W3C standard. Components don't depend from each other. All animations of components are made by means of CSS 3 that removes dependence on js-library. 
+			One of advantages of a framework is a minimalist in a code. The second advantage is a fast start and convenience of use.
+		</p>
+
+		<div class="content">
+			<a href="accordion.html" class="content_item">
+				<i class="icon icon-th-list"></i>
+				<h3 class="title">Responsive accordion</h3>
+			</a>
+			<a href="tabs.html" class="content_item">
+				<i class="icon icon-folder"></i>
+				<h3 class="title">Responsive tabs</h3>
+			</a>
+			<a href="forms.html" class="content_item">
+				<i class="icon icon-edit"></i>
+				<h3 class="title">Responsive forms</h3>
+			</a>
+			<a href="table.html" class="content_item">
+				<i class="icon icon-table"></i>
+				<h3 class="title">Responsive table</h3>
+			</a>
+			<a href="filter.html" class="content_item">
+				<i class="icon icon-filter"></i>
+				<h3 class="title">Responsive filter</h3>
+			</a>
+			<a href="grid.html" class="content_item">
+				<i class="icon icon-th"></i>
+				<h3 class="title">Responsive grid</h3>
+			</a>
+			<a href="hover_animate.html" class="content_item">
+				<i class="icon icon-up-hand"></i>
+				<h3 class="title">Responsive hover</h3>
+			</a>
+			<a href="preloaders.html" class="content_item">
+				<i class="icon icon-spinner"></i>
+				<h3 class="title">Responsive preloaders</h3>
+			</a>
+			<a href="menu.html" class="content_item">
+				<i class="icon icon-menu"></i>
+				<h3 class="title">Responsive menu</h3>
+			</a>
+		</div>
+		<h3 class="title">Support desktop browsers</h3>
+		<img class="browser" src="images/chrome.png" alt="chrome" />
+		<img class="browser" src="images/firefox.png" alt="firefox" />
+		<img class="browser" src="images/ie.png" alt="ie" />
+		<img class="browser" src="images/opera.png" alt="opera" />
+		<h3 class="title">Support mobile browsers</h3>
+		<img class="browser" src="images/safari.png" alt="safari" />
+		<img class="browser" src="images/android.png" alt="android" />
+		<h3 class="title">Features</h3>
+		<div class="main_container columns2">
+			<div class="main_container_item">
+				<div class="accordion_list">
+					<section class="accordion_list_item">
+						<h3 class="title_info_block arrow">Responsive slider on native JS</h3>
+						<div class="info">
+							<ul class="list">
+								<li class="list_item">does not use Jquery</li>
+								<li class="list_item">many animation effects slides</li>
+								<li class="list_item">support Drag and Drop</li>
+								<li class="list_item">CSS3 animation layers of slide</li>
+								<li class="list_item">CSS3 animations</li>
+								<li class="list_item">friendly to mobile devices</li>
+								<li class="list_item">easy connection</li>						
+							</ul>
+						</div>
+					</section>
+					<section class="accordion_list_item">
+						<h3 class="title_info_block arrow">Responsive filter of products</h3>
+						<div class="info">
+							<ul class="list">
+								<li class="list_item">CSS3 animations</li>
+								<li class="list_item">friendly to mobile devices</li>
+								<li class="list_item">easy connection</li>
+								<li class="list_item">easy filtering</li>
+								<li class="list_item">for view product do not need to reload the page</li>						
+							</ul>
+						</div>
+					</section>
+					<section class="accordion_list_item">
+						<h3 class="title_info_block arrow">Responsive menu</h3>
+						<div class="info">
+							<ul class="list">
+								<li class="list_item">does not use Jquery</li>
+								<li class="list_item">many kinds of menu animation</li>
+								<li class="list_item">CSS3 animations</li>
+								<li class="list_item">many color themes</li>
+								<li class="list_item">friendly to mobile devices</li>
+								<li class="list_item">easy connection</li>						
+							</ul>
+						</div>
+					</section>
+				</div>
+			</div>
+			<div class="main_container_item">
+				<div class="tabs_container" id="fade_left_tabs">
+					<ul class="tabs">
+						<li data-id="tab1" class="tab current">Advantages</li>
+						<li data-id="tab2" class="tab">Support</li>
+					</ul>
+					<div class="box visible">
+						<ul class="list box_item">
+							<li class="list_item">easy connection and use</li>
+							<li class="list_item">conformity to the W3C standard</li>
+							<li class="list_item">optimized CSS and JS files</li>
+							<li class="list_item">friendly to mobile devices</li>
+							<li class="list_item">semantic HTML5 markup</li>
+							<li class="list_item">animation with CSS3</li>
+							<li class="list_item">friendly CSS3 animation</li>
+							<li class="list_item">support</li>
+							<li class="list_item">video lessons</li>
+							<li class="list_item">frequent updates</li>
+							<li class="list_item">unique components. For example: shopping cart</li>
+							<li class="list_item">using the latest technologies: HTML5, CSS3, SVG </li>
+							<li class="list_item">using the preprocessors: LESS, SASS, Stylus </li>
+						</ul>
+					</div>
+					<div id="tab2_box" class="box">
+						<p class="box_item">E-mail: <a class="mail link" href="mailto:melnik909@ya.ru">melnik909@ya.ru</a></p> 
+						<p  class="box_item">Video lessons: <a href="https://www.youtube.com/playlist?list=PLLu-WYoyebB0NmckvY8HbJil-F8UTzkyq" class="link">www.youtube.com</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<h3 class="title">Buy this framework at Code Canyon!</h3>
+		<a href="http://codecanyon.net/item/responsive-framework/8818382" id="buy">Buy full version for 9$</a>
+	</div>
+	<div class="copyright">Developed by Stas Melnikov. </div>
+<script  src="js/jquery.js"></script>	
+<script async src="js/accordion.js"></script>
+<script async src="js/tabs.js"></script>
+</body>
+</html>

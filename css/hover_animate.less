@@ -1,0 +1,340 @@
+/*
+Responsive framework
+author: Developed by Stas Melnikov. http://stas-melnikov.ru
+*/
+
+/*********************************************mixins*********************************/
+
+
+.transition(@property, @x, @effect){
+
+	-moz-transition: @property @x @effect 0s;
+	-webkit-transition: @property @x @effect 0s;
+	-webkit-transition-delay:  @x 0s;
+	transition: @property @x @effect 0s;
+}
+
+.translate(@x; @y) {
+
+	-webkit-transform: translateZ(0px) translate(@x, @y);
+	-ms-transform: translateZ(0px) translate(@x, @y); 
+    -o-transform: translateZ(0px) translate(@x, @y);
+	transform: translateZ(0px) translate(@x, @y);
+}
+
+.center_full() {
+
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  .translate(-50%, -50%);
+}
+
+
+/**********************************************all**********************************************/
+* {
+	margin : 0;
+	padding : 0; 
+	border : 0;
+	outline: medium none;
+	list-style: none;
+}
+
+.list{
+	text-align: center;
+}
+
+.list_item:before{
+
+	content: "";
+	display: block;
+}
+
+.list_item { 
+
+	position: relative;
+	display: inline-block;
+	
+	border-radius: 50%;
+	
+	width: 15px;
+	height: 15px;
+	
+	margin: 15px 5px;
+	padding: 0;
+}
+
+.events_slider_dotted{
+
+	font-size: 0;
+	
+	background-color: #333;
+	border-radius: 50%;
+	cursor: pointer;
+	
+	display: block;
+	width: 8px;
+	height: 8px;
+	
+	z-index: 2;
+}
+
+
+.active_item_dotted .events_slider_dotted{
+	background-color: #fff;
+}
+
+.background_effect{
+
+	.list_item{
+	
+		overflow: hidden;
+		background: rgba(0,0,0, 1);
+		
+		width: 10px;
+		height: 10px;
+		
+		z-index: 4;
+	}
+	
+	.list_item:before{
+	
+		background-color: #fff;
+
+		width: 12px;
+		height: 12px;
+		
+		.translate(0,20px);
+		.transition(transform, .2s, linear);
+	}
+	
+	.list_item:hover:before{
+		.translate(0, 0px);
+	}
+	
+	.events_slider_dotted{
+		width: 12px;
+		height: 12px;
+	}
+}
+
+#vertical_background_effect{
+
+	.list_item:before{
+		
+		.translate(0,20px);
+		.transition(transform, .4s, linear);
+	}
+	
+	.list_item:hover:before, .active_item_dotted:before{
+		.translate(0, 0px);
+	}
+}
+
+#horizontally_background_effect{
+
+	.list_item:before{
+		
+		.translate(-20px, 0);
+		.transition(transform, .4s, linear);
+	}
+	
+	.list_item:hover:before, .active_item_dotted:before{
+		.translate(0, 0px);
+		
+	}
+}
+
+
+/****************************hover for images***************************************/
+
+
+/****************************circle***************************************/
+
+@width_circle: 200px;
+@height_circle: 200px;
+
+@height_element: 147px;
+
+
+.hover_element {
+    position: relative;
+	overflow: hidden;
+	 
+	height: @height_element;
+}
+
+.wrapper_circle{
+
+    position: absolute;
+	top: -55px;
+	
+    width: @width_circle; 
+	height: @height_circle;
+}
+
+
+.circle {
+
+	background-color: rgba(0,0,0, 0.8);
+	border-radius: 100%;
+	color: #fff;
+    padding: 0;
+	
+    position: absolute;
+	left: 50%;
+    top: 50%;
+	
+    height: 0;
+    width: 0;
+}
+
+.circle_item{
+
+	width: @width_circle / 2;
+	display: block;
+	font-size: 12px;
+	
+	.transition(transform, .3s, linear);
+}
+
+#hover_center_opacity{
+
+	.wrapper_circle{
+		height: 147px;
+		top: 0;
+	}
+
+	.circle{
+	
+		.translate(-50%,-150%);
+		.transition(opacity, .6s, ease);
+		opacity: 0;
+		
+		width:  147px;
+		height: @height_element;
+	}
+	
+	.circle_item{
+		.center_full;
+		max-height: 100px;
+	}
+}
+
+#hover_center_opacity:hover .circle{
+	.translate(-50%,-50%);
+	opacity: 1;
+}
+
+.hover_center_circle{
+
+	.wrapper_circle{
+		height: 147px;
+		top: 0;
+		overflow: hidden;
+	}
+	
+	.circle{
+	
+		.translate(-50%,-150%);
+		transition-property: transform, opacity;
+		transition-duration: 0.7s;
+		opacity: 0;
+		width:  147px;
+		height: 147px;
+	}
+	
+	.circle_item{
+		.center_full;
+		max-height: 100px;
+	}
+}
+
+#hover_top_circle{
+	.circle{
+		.translate(-50%,-150%);
+	}
+}
+
+#hover_top_circle:hover .circle{
+	.translate(-50%,-50%);
+	opacity: 1;
+}
+
+#hover_bottom_circle{
+	.circle{
+		.translate(-50%,150%);
+	}
+}
+
+#hover_bottom_circle:hover .circle{
+	.translate(-50%,-50%);
+	opacity: 1;
+}
+
+/************************full_background**********************************/
+
+.hover_full_background{
+	
+	position: relative;
+	cursor: pointer;
+	
+	width: 200px;
+	height: @height_element;
+	
+	.background{
+		
+		background-color: rgba(0,0,0, 0.8);
+		opacity: 0;
+		overflow: hidden;
+		
+		width: 100%;
+		height: 100%;
+		
+		position: absolute;
+		top: 0;
+		left: 0;
+		
+		.transition(opacity, .6s, ease);
+		.translate(0%,-150%);
+	}
+	
+	.background_item{
+		color: #fff; 
+		.center_full; 
+	}
+	
+	.background_header{
+	
+		color: #fff;
+		font-size: 20px;
+		
+		display: block;
+		
+		position: absolute;
+		top: 0;
+		
+		width: 98%;
+		padding: 1%;
+	}
+	
+	.background_footer{
+	
+		color: #fff;
+		font-size: 14px;
+		
+		display: block;
+		
+		position: absolute;
+		bottom: 0;
+		
+		width: 98%;
+		padding: 1%;
+	}
+}
+
+.hover_full_background:hover .background{
+	opacity: 1;
+	.translate(0%,0%);
+}
+

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Responsive menu</title>
+<meta charset="utf-8" />
+<meta name="description" content="Responsive menu" />
+<meta name="keywords" content="css3 menu, responsive menu, menu, collection menu, animation menu, css3 animation, responsive menu js" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/menu.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="css/fontello.css" type="text/css" media="screen"/>
+<style>
+
+#select_effect{
+	display: none;
+}
+
+.container{
+	text-align: center;
+}
+
+.link{
+	text-decoration: none;
+}
+
+.menu{
+	margin-bottom: 35px;
+}
+
+.img{
+	float: left;
+	margin-right: 35px;
+}
+
+.description{
+	font-size: 14px;
+	margin-top: 10px;
+	text-align: left;
+}
+
+.paragraph{
+	margin-bottom: 15px;
+}
+
+.drop_down_block:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.additional_menu .menu{
+	margin: 0;
+}
+
+#icon_menu{
+	margin: 0 auto;
+}
+
+.drop_down_menu_link {
+
+	text-align: left;
+	padding: 10px 15px;
+	
+	color: #242424;
+	font-size: 15px;
+}
+
+.slide_bottom_block .drop_down_block{
+	-webkit-transform: translateZ(0px) translate(-38%, -10%);
+	-ms-transform: translateZ(0px) translate(-38%, -10%);
+    -o-transform: translateZ(0px) translate(-38%, -10%);
+	transform: translateZ(0px) translate(-38%, -10%);
+}	
+
+.slide_bottom_block:hover .drop_down_block{
+	-webkit-transform: translateZ(0px) translate(-38%, 0);
+	-ms-transform: translateZ(0px) translate(-38%, 0);
+    -o-transform: translateZ(0px) translate(-38%, 0);
+	transform: translateZ(0px) translate(-38%, 0);
+}	
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/fonts_menu/icomoon.eot?q9qwa7');
+	src:url('fonts/fonts_menu/icomoon.eot?#iefixq9qwa7') format('embedded-opentype'),
+		url('fonts/fonts_menu/icomoon.woff?q9qwa7') format('woff'),
+		url('fonts/fonts_menu/icomoon.ttf?q9qwa7') format('truetype'),
+		url('fonts/fonts_menu/icomoon.svg?q9qwa7#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+	content: "\e600";
+}
+.icon-pencil:before {
+	content: "\e604";
+}
+.icon-headphones:before {
+	content: "\e601";
+}
+.icon-cart:before {
+	content: "\e605";
+}
+.icon-airplane:before {
+	content: "\e602";
+}
+.icon-twitter:before {
+	content: "\e603";
+}
+
+@media screen and (max-width: 1280px){ 
+	#select_effect{
+		display: block;
+	}
+}
+
+@media screen and (max-width: 640px){ 
+
+	.img{
+		float: none;
+		display: block;
+		margin: 0 auto;
+	}
+
+	.description{
+		width: 96%;
+		padding: 0 2%;
+	}
+}
+
+@media screen and (max-width: 480px){ 
+
+	.title{
+		font-size: 18px;
+		text-align: left;
+	}
+	
+	#control_color, .control{
+		padding-left: 0;
+		text-align: left;
+	}
+	
+	.content_item .title{
+		text-align: center;
+	}
+	
+	.select_effect_item{
+		margin: 10px 35px 10px 0;
+	}
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<h1 class="title">Responsive side menu</h1>
+		<nav id="wrapper_menu" class="side_menu">	
+			<ul class="menu">
+				<li class="menu_item">
+					<a href="#" class="menu_link icon-home">Home</a>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link icon-pencil">Edit</a>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link icon-headphones">Music</a>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link icon-cart">Cart</a>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link icon-airplane">Airplane</a>
+				</li>
+				<li class="menu_item">
+					<a href="#" class="menu_link icon-twitter">Twitter</a>
+				</li>
+			</ul>
+		</nav>	
+		<div class="content">
+			<a href="index.html" class="content_item">
+				<i class="icon icon-home"></i>
+				<h3 class="title">Home</h3>
+			</a>
+			<a href="accordion.html" class="content_item">
+				<i class="icon icon-th-list"></i>
+				<h3 class="title">Responsive accordion</h3>
+			</a>
+			<a href="tabs.html" class="content_item">
+				<i class="icon icon-folder"></i>
+				<h3 class="title">Responsive tabs</h3>
+			</a>
+			<a href="forms.html" class="content_item">
+				<i class="icon icon-edit"></i>
+				<h3 class="title">Responsive forms</h3>
+			</a>
+			<a href="table.html" class="content_item">
+				<i class="icon icon-table"></i>
+				<h3 class="title">Responsive table</h3>
+			</a>
+			<a href="filter.html" class="content_item">
+				<i class="icon icon-filter"></i>
+				<h3 class="title">Responsive filter</h3>
+			</a>
+			<a href="grid.html" class="content_item">
+				<i class="icon icon-th"></i>
+				<h3 class="title">Responsive grid</h3>
+			</a>
+			<a href="hover_animate.html" class="content_item">
+				<i class="icon icon-up-hand"></i>
+				<h3 class="title">Responsive hover</h3>
+			</a>
+			<a href="preloaders.html" class="content_item">
+				<i class="icon icon-spinner"></i>
+				<h3 class="title">Responsive preloaders</h3>
+			</a>
+			<a href="menu.html" class="content_item">
+				<i class="icon icon-menu"></i>
+				<h3 class="title">Responsive menu</h3>
+			</a>
+		</div>
+		<a href="http://codecanyon.net/item/responsive-framework/8818382" id="buy">Buy full version for 9$</a>
+		<div class="copyright">Developed by Stas Melnikov. </div>
+	</div>
+	
+<script>
+
+	var links = document.body.querySelectorAll('.menu_link'),
+	len = links.length;
+	
+	for(var i = 0; i < len; i++){
+		links[i].addEventListener( 'click', Click, false );
+	}
+	
+
+	function Click(event){
+		event.preventDefault();
+		location.reload();
+	}
+</script>
+
+</body>
+</html>
